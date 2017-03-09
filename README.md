@@ -1,9 +1,12 @@
 # Doorbell Dash
-TODO: Write a project description
+Wireless wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone when pressed. Uses an Amazon Dash Button and a Raspberry Pi with camera.
+
 ## Installation
-TODO: Describe the installation process
+* $ pip install -r requirements.txt
+* $ pip3 install scapy-python3
+* pip install cv2
 ## Usage
-TODO: Write usage instructions
+* run script as SUDO
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
