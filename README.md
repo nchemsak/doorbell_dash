@@ -4,7 +4,9 @@ Wireless wi-fi 'doorbell' that takes a photo of the button presser, and texts yo
 ## Installation
 * $ pip install -r requirements.txt
 * $ pip3 install scapy-python3
-* pip install cv2
+* $ pip install cv2
+* $ pip install twilio
+* $ pip install pyimgur
 
 ## Usage
 * run script as SUDO
