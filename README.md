@@ -1,5 +1,12 @@
 # Doorbell Dash
-wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone when pressed. Uses a reprogrammed Amazon Dash Button and a Raspberry Pi with pi-camera.
+wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone when pressed. 
+
+## What you'll need
+* Amazon Dash Button ($1 - $5)
+* Raspberry Pi
+* Pi-camera
+* Twilio account for texting service (free)
+* Imgur account for images (free)
 
 ## Installation
 * $ pip3 install scapy-python3
@@ -9,12 +16,19 @@ wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone 
 ## Usage
 * You must run script as root user / SUDO
 
-## Contributing
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+## 'Hack' Amazon Dash Button
+* You want to open the Amazon Shopping app on your PHONE.
+* From the menu, GOTO 'Your Account'
+* Scroll down, choose 'Set up a new device'
+* Choose 'Dash Button'
+* Connect your button to your local wifi network
+* Do NOT choose a product to order, just exit the app.
+
+## Discover the Dash Button's MAC address
+* - Push button for 3 seconds until it pulses blue
+* - Connect your computer wifi to "Amazon ConfigureMe"
+* - In a web browser, go to: http://192.168.0.1/
+* - Make note of the MAC address of your Dash Button.
 
 ## Setup Twilio Account
 * To receive SMS notifications, you need to sign up for Twilio
@@ -27,7 +41,27 @@ wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone 
 ## Twilio Notes
 * Twilio makes sending SMS / MMS messages simple by managing the connections with all of the different mobile providers for you. Software developers can use a simple Python API / SDK to request that a message be sent and the Twilio service takes care of the rest.
 * Twilio service prepends “Sent from a Twilio Trial account” to trial account messages.
-* the service is free as long as you are sending 250 messages or less per month.
+* The service is free as long as you are sending 250 messages or less per month.
+
+## General Notes: 
+* Address Resolution Protoco or ARP is used for mapping a network address to a physical address. EXAMPLE:  IP Address to a MAC address
+
+## Update Raspberry Pi
+* It's a good idea to update your Pi to make sure the packages you install are up to date.
+* $ sudo apt-get update
+* $ sudo apt-get dist-upgrade
+
+## If you run into errors updating your Pi, you may need to change your python version system-wide. 
+* $ python --version
+* $ update-alternatives --list python
+* $ sudo update-alternatives --config python
+
+## Contributing
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
 ## Credits
 * Nick Chemsak

@@ -1,21 +1,3 @@
-# run script as SUDO
-# To discover dash MAC address:
-# - push button down for 3 seconds until it pulses blue,
-# - connect your computer wifi to "Amazon ConfigureMe",
-# - in a web browser, go to: http://192.168.0.1/
-
-# notes: Address Resolution Protoco or ARP is used for mapping a network address to a physical address 
-# EXAMPLE:  IP Address to a MAC address
-
-# Change python version system-wide
-# python --version
-# update-alternatives --list python
-# sudo update-alternatives --config python
-
-# Update Raspberry Pi
-# sudo apt-get update
-# sudo apt-get dist-upgrade
-
 # repurpose: ac:63:be:de:a0:63 (NSS)
 # multivitamins: f0:27:2d:4a:96:a9 (NSS)
 # wilsonjones: 84:d6:d0:da:43:b4
@@ -28,13 +10,6 @@ logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
 from take_pic import pic
 from send_text import SMStext
-#import datetime
-#import picamera
-#from twilio.rest import TwilioRestClient
-#import pyimgur
-#from time import sleep
-
-
 
 def arp_display(pkt):
    
