@@ -1,5 +1,5 @@
 # Doorbell Dash
-wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone when pressed. 
+wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone when pressed.
 
 ## What you'll need
 * Amazon Dash Button ($1 - $5)
@@ -12,6 +12,7 @@ wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone 
 * $ pip3 install scapy-python3
 * $ pip install twilio
 * $ pip install pyimgur
+* $ pip install pillow???????
 
 ## Usage
 * You must run script as root user / SUDO
@@ -43,7 +44,7 @@ wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone 
 * Twilio service prepends “Sent from a Twilio Trial account” to trial account messages.
 * The service is free as long as you are sending 250 messages or less per month.
 
-## General Notes: 
+## General Notes:
 * Address Resolution Protoco or ARP is used for mapping a network address to a physical address. EXAMPLE:  IP Address to a MAC address
 
 ## Update Raspberry Pi
@@ -51,7 +52,7 @@ wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone 
 * $ sudo apt-get update
 * $ sudo apt-get dist-upgrade
 
-## If you run into errors updating your Pi, you may need to change your python version system-wide. 
+## If you run into errors updating your Pi, you may need to change your python version system-wide.
 * $ python --version
 * $ update-alternatives --list python
 * $ sudo update-alternatives --config python

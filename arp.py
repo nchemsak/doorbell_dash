@@ -12,13 +12,18 @@ from take_pic import pic
 from send_text import SMStext
 
 def arp_display(pkt):
-   
+
     if pkt[ARP].op == 1: #who-has (request)
         #if pkt[ARP].psrc:
         if pkt[ARP].hwsrc == 'ac:63:be:de:a0:63':
             print("doorbell pressed")
             pic()
             SMStext()
+        # Have a 2nd button and use this below to trigger monitor video
+        # elif pkt[ARP].hwsrc == '':
+        #     print("doorbell 2 pressed")
+        #     pic()
+        #     SMStext()
 
 if __name__ == "__main__":
     sniff(prn=arp_display, filter="arp", store=0, count=0)

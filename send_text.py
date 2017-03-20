@@ -4,9 +4,8 @@ from creds import *
 
 TXT_MSG = "Door Bell Pressed!"
 IMAGE_DIR = "/home/pi/Desktop/"
+# IMAGE_DIR = "/doorbell_dash_project/images"
 IMG = "snap.jpg"
-
-
 
 def SMStext():
     client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
