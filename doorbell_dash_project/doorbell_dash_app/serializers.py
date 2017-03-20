@@ -9,6 +9,8 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('url', 'username', 'email')
 
 class PhotoSerializer(serializers.HyperlinkedModelSerializer):
+    image = serializers.ImageField(max_length=None,use_url=True)
+
     class Meta:
         model = models.Photo
         fields = '__all__'
@@ -18,3 +20,5 @@ class CachedImageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.CachedImage
         fields = ('url', 'photo')
+
+

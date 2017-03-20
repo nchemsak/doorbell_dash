@@ -127,7 +127,9 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = "doorbell_dash_project/doorbell_dash_app/static/"
 
-MEDIA_ROOT = 'images/'
+# MEDIA_ROOT = 'images/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'photos')
+MEDIA_URL = '/photos/'
 
 CORS_ORIGIN_WHITELIST = (
     'google.com',

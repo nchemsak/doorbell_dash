@@ -15,8 +15,11 @@ class Photo(models.Model):
     # def __str__(self):
     #     return str(self.image)
 
+# def photo_post(request):
+#     request.POST
+
 photo = Photo()
-photo.image = "image.jpg"
+photo.image = "photos/image.jpg"
 photo.save()
 
 
@@ -35,4 +38,4 @@ class CachedImage(models.Model):
                     )
             self.save()
 
-# CachedImage()
+

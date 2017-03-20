@@ -19,9 +19,9 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     # url(r'^$', views.index, name='index'),
-]
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 # if settings.DEBUG:
