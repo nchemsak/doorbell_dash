@@ -26,8 +26,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    # 'doorbell_dash_app',
-    'doorbell_dash_app.apps.DoorbellDashAppConfig',
+    'doorbell_dash_app',
+    #'doorbell_dash_app.apps.DoorbellDashAppConfig',
     'corsheaders'
 ]
 

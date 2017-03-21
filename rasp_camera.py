@@ -1,9 +1,35 @@
 import picamera
+from time import sleep
 
-camera = picamera.PiCamera()
+
+IMG_WIDTH = 800
+IMG_HEIGHT = 600
+IMAGE_DIR = "/home/pi/Desktop/"
+IMG = "snap.jpg"
+
+def vid():   
+    camera = picamera.PiCamera()
+    camera.vflip = True
+    camera.hflip = True
+    camera.brightness = 60
+    camera.resolution = (IMG_WIDTH, IMG_HEIGHT)
+    #camera.capture(IMAGE_DIR + IMG)
+    
+
+
+    camera.start_preview()
+    camera.annotate_text = "Doorbell pressed!"
+    camera.annotate_text_size = 50
+    sleep(5)
+    #camera.capture('/home/pi/Desktop/text.jpg')
+    camera.stop_preview()
+    camera.close()
+
+
+# camera = picamera.PiCamera()
 # default brightness is 50
-camera.brightness = 70
-camera.capture('/home/pi/Desktop/image.jpg')
+#camera.brightness = 70
+#camera.capture('/home/pi/Desktop/image.jpg')
 
 # https://www.raspberrypi.org/learning/tweeting-babbage/worksheet/
 
@@ -38,22 +64,22 @@ camera.capture('/home/pi/Desktop/image.jpg')
 ######################################################
 #               add text to video:
 ######################################################
-# camera.start_preview()
-# camera.annotate_text = "Hello world!"
-# camera.annotate_text_size = 50
-# sleep(5)
-# camera.capture('/home/pi/Desktop/text.jpg')
-# camera.stop_preview()
+#camera.start_preview()
+#camera.annotate_text = "Doorbell pressed!"
+#camera.annotate_text_size = 50
+#sleep(5)
+#camera.capture('/home/pi/Desktop/text.jpg')
+#camera.stop_preview()
 
 ######################################################
 #                   loop over effects:
 ######################################################
-# camera.start_preview()
-# for effect in camera.IMAGE_EFFECTS:
+#camera.start_preview()
+#for effect in camera.IMAGE_EFFECTS:
 #     camera.image_effect = effect
 #     camera.annotate_text = "Effect: %s" % effect
 #     sleep(5)
-# camera.stop_preview()
+#camera.stop_preview()
 
 
 ######################################################

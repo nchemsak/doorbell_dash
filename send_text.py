@@ -3,19 +3,20 @@ import pyimgur
 from creds import *
 
 TXT_MSG = "Door Bell Pressed!"
+#IMAGE_DIR = "doorbell_dash_project/photos/photos/"
 IMAGE_DIR = "/home/pi/Desktop/"
-# IMAGE_DIR = "/doorbell_dash_project/images"
+
 IMG = "snap.jpg"
 
 def SMStext():
     client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
     im = pyimgur.Imgur(CLIENT_ID)
     uploaded_image = im.upload_image(IMAGE_DIR + IMG, title=TXT_MSG)
-    client.messages.create(
-        to = TO_PHONE,
-        from_ = FROM_PHONE,
-        body = TXT_MSG,
-    )
+    #client.messages.create(
+        #to = TO_PHONE,
+        #from_ = FROM_PHONE,
+        #body = TXT_MSG,
+    #)
     client.messages.create(
         to = TO_PHONE,
         from_ = FROM_PHONE,

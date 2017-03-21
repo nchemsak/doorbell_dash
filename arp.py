@@ -9,21 +9,25 @@ import logging
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
 from take_pic import pic
+from rasp_camera import vid
 from send_text import SMStext
 
 def arp_display(pkt):
 
     if pkt[ARP].op == 1: #who-has (request)
-        #if pkt[ARP].psrc:
-        if pkt[ARP].hwsrc == 'ac:63:be:de:a0:63':
-            print("doorbell pressed")
-            pic()
-            SMStext()
-        # Have a 2nd button and use this below to trigger monitor video
-        # elif pkt[ARP].hwsrc == '':
-        #     print("doorbell 2 pressed")
-        #     pic()
-        #     SMStext()
+        if pkt[ARP].psrc:
+
+            # Photo Trigger
+            if pkt[ARP].hwsrc == 'ac:63:be:de:a0:63':
+                print("doorbell pressed")
+                pic()
+                SMStext()
+
+            # Video Trigger
+            elif pkt[ARP].hwsrc == 'f0:27:2d:4a:96:a9':
+                 print("doorbell 2 pressed")
+                 vid()
+
 
 if __name__ == "__main__":
     sniff(prn=arp_display, filter="arp", store=0, count=0)

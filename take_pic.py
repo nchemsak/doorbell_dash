@@ -2,6 +2,7 @@ import picamera
 
 IMG_WIDTH = 800
 IMG_HEIGHT = 600
+#IMAGE_DIR = "doorbell_dash_project/photos/photos/"
 IMAGE_DIR = "/home/pi/Desktop/"
 IMG = "snap.jpg"
 
