@@ -3,7 +3,6 @@ import pyimgur
 from creds import *
 
 TXT_MSG = "Door Bell Pressed!"
-#IMAGE_DIR = "/doorbell_dash_project/photos/photos"
 IMAGE_DIR = "/home/pi/Desktop/"
 
 IMG = "snap.jpg"

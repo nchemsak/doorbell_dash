@@ -1,5 +1,6 @@
 import picamera
 import datetime
+from send_text import SMStext
 
 IMG_WIDTH = 800
 IMG_HEIGHT = 600
@@ -32,5 +33,6 @@ def pic_to_db():
     camera.resolution = (IMG_WIDTH, IMG_HEIGHT)
     camera.capture(file)
     camera.close()
+    SMStext()
 
-pic()
+

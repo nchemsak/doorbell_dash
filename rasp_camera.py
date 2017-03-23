@@ -12,11 +12,9 @@ def vid():
     camera.vflip = True
     camera.hflip = True
     camera.brightness = 60
-    camera.resolution = (IMG_WIDTH, IMG_HEIGHT)
+    #camera.resolution = (IMG_WIDTH, IMG_HEIGHT)
     #camera.capture(IMAGE_DIR + IMG)
     
-
-
     camera.start_preview()
     camera.annotate_text = "Doorbell pressed!"
     camera.annotate_text_size = 50
