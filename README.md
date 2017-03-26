@@ -1,5 +1,5 @@
 # Doorbell Dash
-- An Internet of Things device implementing Raspberry Pi, Amazon Dash Buttons, Python/Django, Twilio and Imgur API's. 
+- An Internet of Things device implementing Raspberry Pi, Amazon Dash Buttons, Python 3, Twilio and Imgur API's. 
 - A Wi-Fi enabled doorbell using an Amazon Dash button, that when pressed, takes a photo with the Raspberry Pi camera and sends a photo text message to your phone via Twilio and Imgur. 
 
 ## What you'll need
