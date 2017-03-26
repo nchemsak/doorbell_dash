@@ -1,5 +1,6 @@
 # Doorbell Dash
-wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone when pressed.
+- An Internet of Things device implementing Raspberry Pi, Amazon Dash Buttons, Python/Django, Twilio and Imgur API's. 
+- A Wi-Fi enabled doorbell using an Amazon Dash button, that when pressed, takes a photo with the Raspberry Pi camera and sends a photo text message to your phone via Twilio and Imgur. 
 
 ## What you'll need
 * Amazon Dash Button ($1 - $5)
@@ -12,8 +13,6 @@ wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone 
 * $ pip3 install scapy-python3
 * $ pip install twilio
 * $ pip install pyimgur
-* $ pip install pillow???????
-
 
 ## Usage
 * You must run script as root user / SUDO
@@ -27,21 +26,20 @@ wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone 
 * Do NOT choose a product to order, just exit the app.
 
 ## Discover the Dash Button's MAC address
-* - Push button for 3 seconds until it pulses blue
-* - Connect your computer wifi to "Amazon ConfigureMe"
-* - In a web browser, go to: http://192.168.0.1/
-* - Make note of the MAC address of your Dash Button.
+- Push button for 3 seconds until it pulses blue
+- Connect your computer wifi to "Amazon ConfigureMe"
+- In a web browser, go to: http://192.168.0.1/
+- Make note of the MAC address of your Dash Button.
 
 ## Setup Twilio Account
 * To receive SMS notifications, you need to sign up for Twilio
 * Signup for a free Twilio account
 * As part of the signup process, you need to verify a phone number. Use the cell phone number that you want to send messages to.
-* After you verify your phone number, Twilio will assign you an account phone number to use that is in the same area code as the number you verified. This is the phone number that will be sending MMS messages on your behalf.
-* Click get started, then Go to Your Account.
-* When you login to your account, you will see an Account SID and Auth Token field. Click on the lock icon in front of the Auth Token field to reveal the value. Make note of these two values. You will need them for the Python code.
+* After you verify your phone number, Twilio will assign you a local phone number. This is the phone number that will be sending the text messages.
+* Click "get started", then "Go to Your Account".
+* When you login to your account, you will see an Account SID and Auth Token field. Click on the lock icon in front of the Auth Token field. Make note of these two values. You will need them for the Python code.
 
 ## Twilio Notes
-* Twilio makes sending SMS / MMS messages simple by managing the connections with all of the different mobile providers.
 * Twilio service prepends “Sent from a Twilio Trial account” to trial account messages.
 * The service is free as long as you are sending 250 messages or less per month.
 
@@ -55,7 +53,7 @@ wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone 
 * $ sudo apt-get update
 * $ sudo apt-get dist-upgrade
 
-## If you run into errors updating your Pi, you may need to change your python version system-wide.
+## If you run into errors updating your Pi, you may need to change your python version system-wide.  
 * $ python --version
 * $ update-alternatives --list python
 * $ sudo update-alternatives --config python
@@ -65,7 +63,7 @@ wi-fi 'doorbell' that takes a photo of the button presser, and texts your phone 
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+5. Submit a pull request
 
 ## Credits
 * Nick Chemsak
