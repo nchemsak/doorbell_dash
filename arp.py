@@ -25,18 +25,14 @@ def arp_display(pkt):
         if pkt[ARP].hwsrc == '0c:47:c9:ac:35:56':
             print(file)
             pic()
-            #vid()
 
             # Video Trigger
         elif pkt[ARP].hwsrc == '84:d6:d0:da:43:b4':
-            print("doorbell 2 pressed")
+            print(file)
             vid()
 
 if __name__ == "__main__":
     sniff(prn=arp_display, filter="arp", store=0, count=0)
-    #sniff(prn=arp_display, filter="arp", store=0, count=0, stop_filter=stopfilter)
-
-    
 
 ##https://phaethon.github.io/scapy/getting-started/
    
