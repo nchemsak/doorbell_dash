@@ -12,9 +12,10 @@ from take_pic import pic
 from rasp_camera import vid
 from time import sleep
 from send_text import SMStext
-#import os
-#import sys
-#from os.path import getmtime
+import datetime
+
+timestamp = datetime.datetime.now().strftime("%y%m%d_%H%M%S")
+file = "".join(["doorbell pressed!! Time: ", timestamp])
 
 def arp_display(pkt):
     if pkt[ARP].op == 1: #who-has (request)
@@ -22,7 +23,7 @@ def arp_display(pkt):
 
             # Photo Trigger
         if pkt[ARP].hwsrc == '0c:47:c9:ac:35:56':
-            print("doorbell 1 pressed")
+            print(file)
             pic()
             #vid()
 
@@ -31,20 +32,11 @@ def arp_display(pkt):
             print("doorbell 2 pressed")
             vid()
 
-
-
-
 if __name__ == "__main__":
     sniff(prn=arp_display, filter="arp", store=0, count=0)
     #sniff(prn=arp_display, filter="arp", store=0, count=0, stop_filter=stopfilter)
-    #os.execv(__file__, sys.argv)
-    #os.execvp("sudo", ["sudo"] + sys.argv)
-    #os.execv('/usr/bin/sudo', ['/usr/bin/sudo', '-E'] + sys.argv)
-    #os.execvp("sudo", ["sudo"] + ["python"] + sys.argv)
+
     
-
-
-
 
 ##https://phaethon.github.io/scapy/getting-started/
    
@@ -66,3 +58,4 @@ if __name__ == "__main__":
 ##stop_filter: python function applied to each packet to determine
 ##             if we have to stop the capture after this packet
 ##             ex: stop_filter = lambda x: x.haslayer(TCP)
+
