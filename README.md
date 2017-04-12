@@ -9,7 +9,7 @@
 * Twilio account for texting service (free)
 * Imgur account for images (free)
 
-## Installation
+## Installation on your Raspberry Pi
 * $ pip3 install scapy-python3
 * $ pip install twilio
 * $ pip install pyimgur
@@ -29,7 +29,7 @@
 - Push button for 3 seconds until it pulses blue
 - Connect your computer wifi to "Amazon ConfigureMe"
 - In a web browser, go to: http://192.168.0.1/
-- Make note of the MAC address of your Dash Button.
+- Make note of the MAC address of your Dash Button. Note: For the python code, MAC address needs to be all lower case!
 
 ## Setup Twilio Account
 * To receive SMS notifications, you need to sign up for Twilio
@@ -40,12 +40,12 @@
 * When you login to your account, you will see an Account SID and Auth Token field. Click on the lock icon in front of the Auth Token field. Make note of these two values. You will need them for the Python code.
 
 ## Twilio Notes
-* Twilio service prepends “Sent from a Twilio Trial account” to trial account messages.
+* Twilio prepends “Sent from a Twilio Trial account” to trial account text messages.
 * The service is free as long as you are sending 250 messages or less per month.
 
-## General Notes:
-* !! RENAME ExampleCreds.py to creds.py. Put in all the information you received from Imgur and Twilio here. This will store all personal information (phone numbers, API tokens, etc).  This is not in the project, as it is in the gitignore.
-* Address Resolution Protoco or ARP is used for mapping a network address to a physical address. EXAMPLE:  IP Address to a MAC address
+## General Notes
+* !! <strong> RENAME ExampleCreds.py to creds.py </strong> !! Put in all the information you received from Imgur and Twilio here. This will store all personal information (phone numbers, API tokens, etc).  This is not in the project, as it is in the gitignore.
+* ARP (Address Resolution Protocol) is used for mapping a network address to a physical address. EXAMPLE:  IP Address to a MAC address.
 * Problems with Raspberry Pi and camera communicating? Check to make sure your Pi detects the camera: $ vcgencmd get_camera
 
 ## Update Raspberry Pi
