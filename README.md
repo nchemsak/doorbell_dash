@@ -14,12 +14,6 @@
 * $ pip install twilio
 * $ pip install pyimgur
 
-## Usage
-* You must run script as root user / SUDO
-* $ SUDO python arp.py
-* For the doorbell to work, keep this script running.  
-* arp.py runs a packet sniffer on your local network looking for MAC addresses that are linked to Amazon Dash Buttons.
-
 ## 'Hack' Amazon Dash Button
 * Open the Amazon Shopping app on your PHONE.
 * From the menu, GOTO 'Your Account'
@@ -60,6 +54,12 @@
 * $ python --version
 * $ update-alternatives --list python
 * $ sudo update-alternatives --config python
+
+## Usage
+* You must run script as root user / SUDO
+* $ SUDO python arp.py
+* For the doorbell to work, keep this script running.  
+* arp.py runs a packet sniffer on your local network looking for MAC addresses that are linked to Amazon Dash Buttons.
 
 ## Contributing
 1. Fork it!
