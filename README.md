@@ -10,9 +10,9 @@
 * Imgur account for images (free)
 
 ## Installation on your Raspberry Pi
-* $ pip3 install scapy-python3
-* $ pip install twilio
-* $ pip install pyimgur
+* $ <code>pip3 install scapy-python3</code>
+* $ <code>pip install twilio</code>
+* $ <code>pip install pyimgur</code>
 
 ## 'Hack' Amazon Dash Button
 * Open the Amazon Shopping app on your PHONE.
@@ -47,17 +47,17 @@
 
 ## Update Raspberry Pi
 * It's a good idea to update your Pi to make sure the packages you install are up to date.
-* $ sudo apt-get update
-* $ sudo apt-get dist-upgrade
+* <code>$ sudo apt-get update</code>
+* <code>$ sudo apt-get dist-upgrade</code>
 
 ## If you run into errors updating your Pi, you may need to change your python version system-wide.  
-* $ python --version
-* $ update-alternatives --list python
-* $ sudo update-alternatives --config python
+* $ <code>python --version</code>
+* $ <code>update-alternatives --list python</code>
+* $ <code>sudo update-alternatives --config python</code>
 
 ## Usage
 * You must run script as root user / SUDO
-* $ SUDO python arp.py
+* $ <code>SUDO python arp.py
 * For the doorbell to work, keep this script running.  
 * arp.py runs a packet sniffer on your local network looking for MAC addresses that are linked to Amazon Dash Buttons.
 
