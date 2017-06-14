@@ -57,7 +57,7 @@
 
 ## Usage
 * You must run script as root user / SUDO
-* $ <code>SUDO python arp.py
+* $ <code>SUDO python arp.py</code>
 * For the doorbell to work, keep this script running.  
 * arp.py runs a packet sniffer on your local network looking for MAC addresses that are linked to Amazon Dash Buttons.
 
