@@ -9,13 +9,11 @@
 * Twilio account for texting service (free)
 * Imgur account for images (free)
 
-1.
 ## Installation on your Raspberry Pi
 * $ <code>pip3 install scapy-python3</code>
 * $ <code>pip install twilio</code>
 * $ <code>pip install pyimgur</code>
 
-2.
 ## 'Hack' Amazon Dash Button
 * Open the Amazon Shopping app on your PHONE.
 * From the menu, GOTO 'Your Account'
@@ -24,14 +22,12 @@
 * Connect your button to your local wifi network
 * Do NOT choose a product to order, just exit the app.
 
-3.
 ## Discover the Dash Button's MAC address
 - Push button for 3 seconds until it pulses blue
 - Connect your computer wifi to "Amazon ConfigureMe"
 - In a web browser, go to: http://192.168.0.1/
 - Make note of the MAC address of your Dash Button. Note: For the python code, MAC address needs to be all lower case!
 
-4.
 ## Setup Twilio Account
 * To receive SMS notifications, you need to sign up for Twilio
 * Signup for a free Twilio account
