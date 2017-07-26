@@ -43,7 +43,8 @@
 ## General Notes
 * !! <strong> RENAME ExampleCreds.py to creds.py </strong> !! Put in all the information you received from Imgur and Twilio here. This will store all personal information (phone numbers, API tokens, etc).  This is not in the project, as it is in the gitignore.
 * ARP (Address Resolution Protocol) is used for mapping a network address to a physical address. EXAMPLE:  IP Address to a MAC address.
-* Problems with Raspberry Pi and camera communicating? Check to make sure your Pi detects the camera: <code>$vcgencmd get_camera</code>
+* Problems with Raspberry Pi and camera communicating? Check to make sure your Pi detects the camera: <br>
+  <code>$vcgencmd get_camera</code>
 
 ## Update Raspberry Pi
 * It's a good idea to update your Pi to make sure the packages you install are up to date.
